@@ -41,7 +41,8 @@ from PIL import Image
 st.title("Chest X-ray Image Classification")
 st.text("This is an AI  system that analyzes chest X-ray images and suggests possible diagnoses.")
 st.subheader("Give it a go!")
-st.text("Upload a chest X-ray image [for now, only png format is allowed] and watch the ML magic happen!")
+st.text("Upload a chest X-ray image on the side-bar and watch the ML magic happen!")
+st.text("[for now, only png format is allowed] ")
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
