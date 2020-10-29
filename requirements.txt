@@ -1,11 +1,10 @@
 cmake
 tensorflow
 numpy
-streamlit
 seaborn
 pandas
 matplotlib
 scikit_learn
 shap
 lifelines
-opencv-python==3.3.0.9
+opencv-python
