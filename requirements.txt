@@ -7,4 +7,4 @@ matplotlib
 scikit_learn
 shap
 lifelines
-opencv-python
+opencv-python==3.4.2.17
