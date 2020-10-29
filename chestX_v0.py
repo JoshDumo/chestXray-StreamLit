@@ -211,8 +211,9 @@ def compute_gradcam(model, original_img, img_tensor, mean, std, data_dir, df,
     predictions = model.predict(preprocessed_input)
     
     sorted_preds, sorted_labels = (list(reversed(t)) for t in zip(*sorted(zip(predictions[0], labels))))
-    fig_bars = plt.barh(sorted_labels, sorted_preds)
-    st.sidebar.pyplot(fig_bars)
+    fig_bar = plt.figure()
+    plt.barh(sorted_labels, sorted_preds)
+    st.sidebar.pyplot(fig_bar)
     #st.write("Ground Truth: ", ", ".join(np.take(labels, np.nonzero(df[df["Image"] == img][labels].values[0]))[0]))
 
     fig_arr = plt.figure(figsize=(15, 10))
