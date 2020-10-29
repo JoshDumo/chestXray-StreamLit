@@ -39,7 +39,7 @@ import shap
 from PIL import Image
 
 st.title("Chest X-ray Image Classification")
-
+st.text("This is an AI  system that analyzes chest X-ray images and suggests a possible diagnosis. To test, upload a chest X-ray image [for now, only png format is allowed] and watch the ML magic happen!")
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
