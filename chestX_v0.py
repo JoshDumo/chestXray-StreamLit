@@ -38,8 +38,9 @@ import shap
 
 from PIL import Image
 
-st.title("Chest X-ray Image Classification")
+st.title("Chest X-ray Image Classification [Demo]")
 st.text("This is an AI/ML system that analyzes chest X-ray images and suggests possible diagnoses.")
+st.text("NOTE: This is just a demo toy model. It cannot be used for professional medical/radiological diagnosis.")
 st.subheader("Give it a go!")
 st.text("Upload a chest X-ray image on the side-bar and watch the ML magic happen!")
 st.text("[for now, only png format is allowed] ")
