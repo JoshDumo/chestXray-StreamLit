@@ -43,6 +43,7 @@ st.text("This is an AI/ML system that analyzes chest X-ray images and suggests p
 st.text("NOTE: This is just a demo toy model. It cannot be used for professional medical/radiological diagnosis.")
 st.subheader("Give it a go!")
 st.text("Upload a chest X-ray image on the side-bar and watch the ML magic happen!")
+st.text("[A default X-ray showing Cariomegaly is shown] ")
 st.text("[for now, only png format is allowed] ")
 st.text("A diagnosis, its probability and heatmap will appear below. please wait patiently...")
 
@@ -328,5 +329,8 @@ mean, std = get_mean_std_per_batch(df)
 # Get the user-uploaded image and classify it
 if uploaded_file is not None:
     processed_img, processed_img_tensor = load_and_preprocess(uploaded_file, 320, 320, mean, std)
+    compute_gradcam(model, processed_img, processed_img_tensor, mean, std, IMAGE_DIR, df, labels, labels_to_show)
+else:
+    processed_img, processed_img_tensor = load_and_preprocess('nih_new/images-small/00000284_005.png', 320, 320, mean, std)
     compute_gradcam(model, processed_img, processed_img_tensor, mean, std, IMAGE_DIR, df, labels, labels_to_show)
 
