@@ -1,3 +1,4 @@
-libgtk3.0-dev
+mesa-utils
 libgl1-mesa-dev
+freeglut3-dev
 
